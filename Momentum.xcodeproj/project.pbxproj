@@ -26,6 +26,10 @@
 		353063FF1EC4C862003F542B /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063FE1EC4C862003F542B /* LoadingViewModel.swift */; };
 		353064031EC4C9E3003F542B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064021EC4C9E3003F542B /* Protocols.swift */; };
 		353064051EC4CD99003F542B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064041EC4CD99003F542B /* LoadingViewController.swift */; };
+		353064261EC4D42F003F542B /* ApplicationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064251EC4D42F003F542B /* ApplicationsViewModel.swift */; };
+		3530642A1EC4D513003F542B /* TableApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064291EC4D513003F542B /* TableApplicationsViewController.swift */; };
+		3530642D1EC4D794003F542B /* ApplicationsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */; };
+		3530642E1EC4D794003F542B /* ApplicationsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		353063FE1EC4C862003F542B /* LoadingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		353064021EC4C9E3003F542B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		353064041EC4CD99003F542B /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		353064251EC4D42F003F542B /* ApplicationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsViewModel.swift; sourceTree = "<group>"; };
+		353064291EC4D513003F542B /* TableApplicationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableApplicationsViewController.swift; sourceTree = "<group>"; };
+		3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsViewCell.swift; sourceTree = "<group>"; };
+		3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsViewCell.xib; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +95,8 @@
 		353063CF1EC4B652003F542B /* Momentum */ = {
 			isa = PBXGroup;
 			children = (
+				353064241EC4D3F0003F542B /* View Controllers */,
+				353064001EC4C9BB003F542B /* View Models */,
 				353063FB1EC4C32B003F542B /* Models */,
 				353063E41EC4B834003F542B /* Utils */,
 				353063E71EC4B8C9003F542B /* Network */,
@@ -95,9 +105,7 @@
 				353063D71EC4B652003F542B /* Assets.xcassets */,
 				353063D91EC4B652003F542B /* LaunchScreen.storyboard */,
 				353063DC1EC4B652003F542B /* Info.plist */,
-				353064001EC4C9BB003F542B /* View Models */,
-				353064021EC4C9E3003F542B /* Protocols.swift */,
-				353064041EC4CD99003F542B /* LoadingViewController.swift */,
+				353064301EC4DC71003F542B /* Views */,
 			);
 			path = Momentum;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 		353063E41EC4B834003F542B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				353064021EC4C9E3003F542B /* Protocols.swift */,
 				353063E21EC4B81F003F542B /* Constants.swift */,
 			);
 			name = Utils;
@@ -162,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				353064011EC4C9C5003F542B /* Loading View */,
+				353064271EC4D4BF003F542B /* Applications View */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -172,6 +182,56 @@
 				353063FE1EC4C862003F542B /* LoadingViewModel.swift */,
 			);
 			name = "Loading View";
+			sourceTree = "<group>";
+		};
+		353064241EC4D3F0003F542B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				353064281EC4D4DE003F542B /* Loading View */,
+				3530642F1EC4DB68003F542B /* Table Applications View */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		353064271EC4D4BF003F542B /* Applications View */ = {
+			isa = PBXGroup;
+			children = (
+				353064251EC4D42F003F542B /* ApplicationsViewModel.swift */,
+			);
+			name = "Applications View";
+			sourceTree = "<group>";
+		};
+		353064281EC4D4DE003F542B /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				353064041EC4CD99003F542B /* LoadingViewController.swift */,
+			);
+			name = "Loading View";
+			sourceTree = "<group>";
+		};
+		3530642F1EC4DB68003F542B /* Table Applications View */ = {
+			isa = PBXGroup;
+			children = (
+				353064291EC4D513003F542B /* TableApplicationsViewController.swift */,
+			);
+			name = "Table Applications View";
+			sourceTree = "<group>";
+		};
+		353064301EC4DC71003F542B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				353064311EC4DC7A003F542B /* Applications Cell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		353064311EC4DC7A003F542B /* Applications Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */,
+				3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */,
+			);
+			name = "Applications Cell";
 			sourceTree = "<group>";
 		};
 		645836ECAA26FD01E393E8D3 /* Pods */ = {
@@ -257,6 +317,7 @@
 				353063DB1EC4B652003F542B /* LaunchScreen.storyboard in Resources */,
 				353063D81EC4B652003F542B /* Assets.xcassets in Resources */,
 				353063D61EC4B652003F542B /* Main.storyboard in Resources */,
+				3530642E1EC4D794003F542B /* ApplicationsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,12 +385,15 @@
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
 				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
 				353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */,
+				3530642A1EC4D513003F542B /* TableApplicationsViewController.swift in Sources */,
+				353064261EC4D42F003F542B /* ApplicationsViewModel.swift in Sources */,
 				353063FD1EC4C43E003F542B /* CoreDataOperations.swift in Sources */,
 				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
 				353063EF1EC4BFFE003F542B /* Model.xcdatamodel in Sources */,
 				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,
 				353063F61EC4C085003F542B /* CDPhoto.swift in Sources */,
 				353063F41EC4C085003F542B /* CDApplication.swift in Sources */,
+				3530642D1EC4D794003F542B /* ApplicationsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
