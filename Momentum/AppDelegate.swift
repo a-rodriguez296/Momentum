@@ -21,14 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Initialize Core Data
         initializeCoreData()
         
-        MomentumApiClient.sharedInstance.getTopApplications { (state, string) in
-            
-            if state{
-                
-            }
-            
-        }
-        
         
         return true
     }

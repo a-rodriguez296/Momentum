@@ -24,6 +24,15 @@ class CoreDataOperations {
     }
     
     
+    class func isDataAvailable() -> Bool{
+        
+        //Determine if there's data available
+        guard let _ = CDApplication.mr_findFirst() else{
+            return false
+        }
+        
+        return true
+    }
 }
 
 

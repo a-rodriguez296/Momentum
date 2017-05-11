@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E0767C02EEE6CEE402AA8C0 /* Pods_Momentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */; };
 		353063D11EC4B652003F542B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063D01EC4B652003F542B /* AppDelegate.swift */; };
-		353063D31EC4B652003F542B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063D21EC4B652003F542B /* ViewController.swift */; };
 		353063D61EC4B652003F542B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353063D41EC4B652003F542B /* Main.storyboard */; };
 		353063D81EC4B652003F542B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353063D71EC4B652003F542B /* Assets.xcassets */; };
 		353063DB1EC4B652003F542B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353063D91EC4B652003F542B /* LaunchScreen.storyboard */; };
@@ -24,13 +23,15 @@
 		353063F61EC4C085003F542B /* CDPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F21EC4C085003F542B /* CDPhoto.swift */; };
 		353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */; };
 		353063FD1EC4C43E003F542B /* CoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063FC1EC4C43E003F542B /* CoreDataOperations.swift */; };
+		353063FF1EC4C862003F542B /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063FE1EC4C862003F542B /* LoadingViewModel.swift */; };
+		353064031EC4C9E3003F542B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064021EC4C9E3003F542B /* Protocols.swift */; };
+		353064051EC4CD99003F542B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064041EC4CD99003F542B /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AF77D8C53A43A461105B7BF /* Pods-Momentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.debug.xcconfig"; sourceTree = "<group>"; };
 		353063CD1EC4B652003F542B /* Momentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353063D01EC4B652003F542B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		353063D21EC4B652003F542B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		353063D51EC4B652003F542B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		353063D71EC4B652003F542B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353063DA1EC4B652003F542B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,9 @@
 		353063F21EC4C085003F542B /* CDPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPhoto.swift; sourceTree = "<group>"; };
 		353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		353063FC1EC4C43E003F542B /* CoreDataOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperations.swift; sourceTree = "<group>"; };
+		353063FE1EC4C862003F542B /* LoadingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		353064021EC4C9E3003F542B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		353064041EC4CD99003F542B /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,11 +91,13 @@
 				353063E41EC4B834003F542B /* Utils */,
 				353063E71EC4B8C9003F542B /* Network */,
 				353063D01EC4B652003F542B /* AppDelegate.swift */,
-				353063D21EC4B652003F542B /* ViewController.swift */,
 				353063D41EC4B652003F542B /* Main.storyboard */,
 				353063D71EC4B652003F542B /* Assets.xcassets */,
 				353063D91EC4B652003F542B /* LaunchScreen.storyboard */,
 				353063DC1EC4B652003F542B /* Info.plist */,
+				353064001EC4C9BB003F542B /* View Models */,
+				353064021EC4C9E3003F542B /* Protocols.swift */,
+				353064041EC4CD99003F542B /* LoadingViewController.swift */,
 			);
 			path = Momentum;
 			sourceTree = "<group>";
@@ -150,6 +156,22 @@
 				353063FA1EC4C0CF003F542B /* Core Data */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		353064001EC4C9BB003F542B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				353064011EC4C9C5003F542B /* Loading View */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		353064011EC4C9C5003F542B /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				353063FE1EC4C862003F542B /* LoadingViewModel.swift */,
+			);
+			name = "Loading View";
 			sourceTree = "<group>";
 		};
 		645836ECAA26FD01E393E8D3 /* Pods */ = {
@@ -293,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				353063D31EC4B652003F542B /* ViewController.swift in Sources */,
+				353064031EC4C9E3003F542B /* Protocols.swift in Sources */,
 				353063ED1EC4BEF6003F542B /* Application.swift in Sources */,
+				353064051EC4CD99003F542B /* LoadingViewController.swift in Sources */,
 				353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */,
+				353063FF1EC4C862003F542B /* LoadingViewModel.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
 				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
