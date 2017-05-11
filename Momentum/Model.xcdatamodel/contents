@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Xcode 7.3" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDApplication" representedClassName="CDApplication" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDPhoto" inverseName="application" inverseEntity="CDPhoto" syncable="YES"/>
+    </entity>
+    <entity name="CDPhoto" representedClassName="CDPhoto" syncable="YES">
+        <attribute name="photoData" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <relationship name="application" maxCount="1" deletionRule="Nullify" destinationEntity="CDApplication" inverseName="photo" inverseEntity="CDApplication" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDApplication" positionX="-54" positionY="0" width="128" height="105"/>
+        <element name="CDPhoto" positionX="270" positionY="-225" width="128" height="75"/>
+    </elements>
+</model>

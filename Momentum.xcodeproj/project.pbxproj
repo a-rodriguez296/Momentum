@@ -18,6 +18,11 @@
 		353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E81EC4B915003F542B /* MomentumRouter.swift */; };
 		353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */; };
 		353063ED1EC4BEF6003F542B /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063EC1EC4BEF6003F542B /* Application.swift */; };
+		353063EF1EC4BFFE003F542B /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 353063EE1EC4BFFE003F542B /* Model.xcdatamodel */; };
+		353063F41EC4C085003F542B /* CDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F01EC4C085003F542B /* CDApplication.swift */; };
+		353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F11EC4C085003F542B /* CDApplication+CoreDataProperties.swift */; };
+		353063F61EC4C085003F542B /* CDPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F21EC4C085003F542B /* CDPhoto.swift */; };
+		353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		353063E81EC4B915003F542B /* MomentumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentumRouter.swift; sourceTree = "<group>"; };
 		353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsResponse.swift; sourceTree = "<group>"; };
 		353063EC1EC4BEF6003F542B /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		353063EE1EC4BFFE003F542B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		353063F01EC4C085003F542B /* CDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDApplication.swift; sourceTree = "<group>"; };
+		353063F11EC4C085003F542B /* CDApplication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDApplication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		353063F21EC4C085003F542B /* CDPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPhoto.swift; sourceTree = "<group>"; };
+		353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +81,7 @@
 		353063CF1EC4B652003F542B /* Momentum */ = {
 			isa = PBXGroup;
 			children = (
+				353063FB1EC4C32B003F542B /* Models */,
 				353063E41EC4B834003F542B /* Utils */,
 				353063E71EC4B8C9003F542B /* Network */,
 				353063D01EC4B652003F542B /* AppDelegate.swift */,
@@ -79,8 +90,6 @@
 				353063D71EC4B652003F542B /* Assets.xcassets */,
 				353063D91EC4B652003F542B /* LaunchScreen.storyboard */,
 				353063DC1EC4B652003F542B /* Info.plist */,
-				353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */,
-				353063EC1EC4BEF6003F542B /* Application.swift */,
 			);
 			path = Momentum;
 			sourceTree = "<group>";
@@ -100,6 +109,44 @@
 				353063E51EC4B854003F542B /* MomentumApiClient.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		353063F81EC4C0BC003F542B /* Machine Files */ = {
+			isa = PBXGroup;
+			children = (
+				353063F11EC4C085003F542B /* CDApplication+CoreDataProperties.swift */,
+				353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */,
+			);
+			name = "Machine Files";
+			sourceTree = "<group>";
+		};
+		353063F91EC4C0C6003F542B /* Human Files */ = {
+			isa = PBXGroup;
+			children = (
+				353063F01EC4C085003F542B /* CDApplication.swift */,
+				353063F21EC4C085003F542B /* CDPhoto.swift */,
+			);
+			name = "Human Files";
+			sourceTree = "<group>";
+		};
+		353063FA1EC4C0CF003F542B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				353063F91EC4C0C6003F542B /* Human Files */,
+				353063F81EC4C0BC003F542B /* Machine Files */,
+				353063EE1EC4BFFE003F542B /* Model.xcdatamodel */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		353063FB1EC4C32B003F542B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */,
+				353063EC1EC4BEF6003F542B /* Application.swift */,
+				353063FA1EC4C0CF003F542B /* Core Data */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		645836ECAA26FD01E393E8D3 /* Pods */ = {
@@ -248,8 +295,13 @@
 				353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
+				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
+				353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */,
 				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
+				353063EF1EC4BFFE003F542B /* Model.xcdatamodel in Sources */,
 				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,
+				353063F61EC4C085003F542B /* CDPhoto.swift in Sources */,
+				353063F41EC4C085003F542B /* CDApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
