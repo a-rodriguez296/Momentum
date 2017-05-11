@@ -30,6 +30,9 @@
 		3530642A1EC4D513003F542B /* TableApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064291EC4D513003F542B /* TableApplicationsViewController.swift */; };
 		3530642D1EC4D794003F542B /* ApplicationsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */; };
 		3530642E1EC4D794003F542B /* ApplicationsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */; };
+		353064341EC4E146003F542B /* ApplicationsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064321EC4E146003F542B /* ApplicationsCollectionCell.swift */; };
+		353064351EC4E146003F542B /* ApplicationsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 353064331EC4E146003F542B /* ApplicationsCollectionCell.xib */; };
+		353064381EC503E9003F542B /* CollectionApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353064371EC503E9003F542B /* CollectionApplicationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		353064291EC4D513003F542B /* TableApplicationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableApplicationsViewController.swift; sourceTree = "<group>"; };
 		3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsViewCell.swift; sourceTree = "<group>"; };
 		3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsViewCell.xib; sourceTree = "<group>"; };
+		353064321EC4E146003F542B /* ApplicationsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsCollectionCell.swift; sourceTree = "<group>"; };
+		353064331EC4E146003F542B /* ApplicationsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationsCollectionCell.xib; sourceTree = "<group>"; };
+		353064371EC503E9003F542B /* CollectionApplicationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionApplicationsViewController.swift; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,12 +106,12 @@
 				353063FB1EC4C32B003F542B /* Models */,
 				353063E41EC4B834003F542B /* Utils */,
 				353063E71EC4B8C9003F542B /* Network */,
+				353064301EC4DC71003F542B /* Views */,
 				353063D01EC4B652003F542B /* AppDelegate.swift */,
 				353063D41EC4B652003F542B /* Main.storyboard */,
 				353063D71EC4B652003F542B /* Assets.xcassets */,
 				353063D91EC4B652003F542B /* LaunchScreen.storyboard */,
 				353063DC1EC4B652003F542B /* Info.plist */,
-				353064301EC4DC71003F542B /* Views */,
 			);
 			path = Momentum;
 			sourceTree = "<group>";
@@ -188,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				353064281EC4D4DE003F542B /* Loading View */,
-				3530642F1EC4DB68003F542B /* Table Applications View */,
+				3530643A1EC5094E003F542B /* Applications View */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -220,18 +226,45 @@
 		353064301EC4DC71003F542B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				353064311EC4DC7A003F542B /* Applications Cell */,
+				353064311EC4DC7A003F542B /* Applications Table Cell */,
+				353064361EC50229003F542B /* Applications Collection Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		353064311EC4DC7A003F542B /* Applications Cell */ = {
+		353064311EC4DC7A003F542B /* Applications Table Cell */ = {
 			isa = PBXGroup;
 			children = (
 				3530642B1EC4D794003F542B /* ApplicationsViewCell.swift */,
 				3530642C1EC4D794003F542B /* ApplicationsViewCell.xib */,
 			);
-			name = "Applications Cell";
+			name = "Applications Table Cell";
+			sourceTree = "<group>";
+		};
+		353064361EC50229003F542B /* Applications Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				353064321EC4E146003F542B /* ApplicationsCollectionCell.swift */,
+				353064331EC4E146003F542B /* ApplicationsCollectionCell.xib */,
+			);
+			name = "Applications Collection Cell";
+			sourceTree = "<group>";
+		};
+		353064391EC50940003F542B /* Collection Applications View */ = {
+			isa = PBXGroup;
+			children = (
+				353064371EC503E9003F542B /* CollectionApplicationsViewController.swift */,
+			);
+			name = "Collection Applications View";
+			sourceTree = "<group>";
+		};
+		3530643A1EC5094E003F542B /* Applications View */ = {
+			isa = PBXGroup;
+			children = (
+				3530642F1EC4DB68003F542B /* Table Applications View */,
+				353064391EC50940003F542B /* Collection Applications View */,
+			);
+			name = "Applications View";
 			sourceTree = "<group>";
 		};
 		645836ECAA26FD01E393E8D3 /* Pods */ = {
@@ -318,6 +351,7 @@
 				353063D81EC4B652003F542B /* Assets.xcassets in Resources */,
 				353063D61EC4B652003F542B /* Main.storyboard in Resources */,
 				3530642E1EC4D794003F542B /* ApplicationsViewCell.xib in Resources */,
+				353064351EC4E146003F542B /* ApplicationsCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,12 +417,14 @@
 				353063FF1EC4C862003F542B /* LoadingViewModel.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
+				353064381EC503E9003F542B /* CollectionApplicationsViewController.swift in Sources */,
 				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
 				353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */,
 				3530642A1EC4D513003F542B /* TableApplicationsViewController.swift in Sources */,
 				353064261EC4D42F003F542B /* ApplicationsViewModel.swift in Sources */,
 				353063FD1EC4C43E003F542B /* CoreDataOperations.swift in Sources */,
 				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
+				353064341EC4E146003F542B /* ApplicationsCollectionCell.swift in Sources */,
 				353063EF1EC4BFFE003F542B /* Model.xcdatamodel in Sources */,
 				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,
 				353063F61EC4C085003F542B /* CDPhoto.swift in Sources */,
