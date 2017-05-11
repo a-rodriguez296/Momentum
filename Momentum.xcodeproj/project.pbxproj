@@ -16,6 +16,8 @@
 		353063E31EC4B81F003F542B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E21EC4B81F003F542B /* Constants.swift */; };
 		353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E51EC4B854003F542B /* MomentumApiClient.swift */; };
 		353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E81EC4B915003F542B /* MomentumRouter.swift */; };
+		353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */; };
+		353063ED1EC4BEF6003F542B /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063EC1EC4BEF6003F542B /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		353063E21EC4B81F003F542B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		353063E51EC4B854003F542B /* MomentumApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentumApiClient.swift; sourceTree = "<group>"; };
 		353063E81EC4B915003F542B /* MomentumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentumRouter.swift; sourceTree = "<group>"; };
+		353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsResponse.swift; sourceTree = "<group>"; };
+		353063EC1EC4BEF6003F542B /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +79,8 @@
 				353063D71EC4B652003F542B /* Assets.xcassets */,
 				353063D91EC4B652003F542B /* LaunchScreen.storyboard */,
 				353063DC1EC4B652003F542B /* Info.plist */,
+				353063EA1EC4BEC2003F542B /* ApplicationsResponse.swift */,
+				353063EC1EC4BEF6003F542B /* Application.swift */,
 			);
 			path = Momentum;
 			sourceTree = "<group>";
@@ -238,8 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				353063D31EC4B652003F542B /* ViewController.swift in Sources */,
+				353063ED1EC4BEF6003F542B /* Application.swift in Sources */,
 				353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
+				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
 				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
 				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,
 			);
