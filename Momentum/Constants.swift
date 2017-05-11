@@ -30,5 +30,11 @@ struct Constants {
         }
     }
     
+    struct Segues{
+        static let tableDetailSegue = "tableDetailSegue"
+        static let collectionDetailSegue = "collectionDetailSegue"
+        
+    }
+    
 }
 

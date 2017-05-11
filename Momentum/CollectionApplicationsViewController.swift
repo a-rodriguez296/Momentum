@@ -9,18 +9,28 @@
 import UIKit
 
 class CollectionApplicationsViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let viewModel = ApplicationsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel.initializeFetchedResultsController()
         
         collectionView.register(UINib(nibName: "ApplicationsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Constants.Segues.collectionDetailSegue{
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.application = sender! as? CDApplication
+        }
+    }
+    
 }
 
 
@@ -38,7 +48,12 @@ extension CollectionApplicationsViewController: UICollectionViewDataSource{
         
         return cell
     }
+}
+
+extension CollectionApplicationsViewController: UICollectionViewDelegate{
     
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let application = viewModel.object(at: indexPath) as! CDApplication
+        performSegue(withIdentifier: Constants.Segues.collectionDetailSegue, sender: application)
+    }
 }

@@ -26,6 +26,16 @@ class TableApplicationsViewController: UIViewController {
         table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Constants.Segues.tableDetailSegue{
+            
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.application = sender! as? CDApplication
+        }
+    }
+    
 }
 
 extension TableApplicationsViewController: UITableViewDataSource{
@@ -44,6 +54,14 @@ extension TableApplicationsViewController: UITableViewDataSource{
         cell.initializeCell(withApplication: application)
         return cell
     }
+}
+
+
+extension TableApplicationsViewController: UITableViewDelegate{
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let application = viewModel.object(at: indexPath) as! CDApplication
+        
+        performSegue(withIdentifier: Constants.Segues.tableDetailSegue, sender: application)
+    }
 }

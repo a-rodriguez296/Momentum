@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E0767C02EEE6CEE402AA8C0 /* Pods_Momentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */; };
+		35179E021EC50F2D00EEB96F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35179E011EC50F2D00EEB96F /* DetailViewController.swift */; };
 		353063D11EC4B652003F542B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063D01EC4B652003F542B /* AppDelegate.swift */; };
 		353063D61EC4B652003F542B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353063D41EC4B652003F542B /* Main.storyboard */; };
 		353063D81EC4B652003F542B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353063D71EC4B652003F542B /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0AF77D8C53A43A461105B7BF /* Pods-Momentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.debug.xcconfig"; sourceTree = "<group>"; };
+		35179E011EC50F2D00EEB96F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		353063CD1EC4B652003F542B /* Momentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353063D01EC4B652003F542B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353063D51EC4B652003F542B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35179E031EC5106100EEB96F /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				35179E011EC50F2D00EEB96F /* DetailViewController.swift */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
 		353063C41EC4B652003F542B = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 			children = (
 				353064281EC4D4DE003F542B /* Loading View */,
 				3530643A1EC5094E003F542B /* Applications View */,
+				35179E031EC5106100EEB96F /* Detail View */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -416,6 +427,7 @@
 				353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */,
 				353063FF1EC4C862003F542B /* LoadingViewModel.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
+				35179E021EC50F2D00EEB96F /* DetailViewController.swift in Sources */,
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
 				353064381EC503E9003F542B /* CollectionApplicationsViewController.swift in Sources */,
 				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
