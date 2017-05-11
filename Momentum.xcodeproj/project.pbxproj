@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0767C02EEE6CEE402AA8C0 /* Pods_Momentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */; };
 		353063D11EC4B652003F542B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063D01EC4B652003F542B /* AppDelegate.swift */; };
 		353063D31EC4B652003F542B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063D21EC4B652003F542B /* ViewController.swift */; };
 		353063D61EC4B652003F542B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353063D41EC4B652003F542B /* Main.storyboard */; };
 		353063D81EC4B652003F542B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353063D71EC4B652003F542B /* Assets.xcassets */; };
 		353063DB1EC4B652003F542B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353063D91EC4B652003F542B /* LaunchScreen.storyboard */; };
+		353063E31EC4B81F003F542B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E21EC4B81F003F542B /* Constants.swift */; };
+		353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E51EC4B854003F542B /* MomentumApiClient.swift */; };
+		353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063E81EC4B915003F542B /* MomentumRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AF77D8C53A43A461105B7BF /* Pods-Momentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.debug.xcconfig"; sourceTree = "<group>"; };
 		353063CD1EC4B652003F542B /* Momentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353063D01EC4B652003F542B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353063D21EC4B652003F542B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		353063D71EC4B652003F542B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353063DA1EC4B652003F542B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353063DC1EC4B652003F542B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353063E21EC4B81F003F542B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		353063E51EC4B854003F542B /* MomentumApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentumApiClient.swift; sourceTree = "<group>"; };
+		353063E81EC4B915003F542B /* MomentumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentumRouter.swift; sourceTree = "<group>"; };
+		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0767C02EEE6CEE402AA8C0 /* Pods_Momentum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				353063CF1EC4B652003F542B /* Momentum */,
 				353063CE1EC4B652003F542B /* Products */,
+				645836ECAA26FD01E393E8D3 /* Pods */,
+				BA578FED7487ED2FFB27DCB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,8 @@
 		353063CF1EC4B652003F542B /* Momentum */ = {
 			isa = PBXGroup;
 			children = (
+				353063E41EC4B834003F542B /* Utils */,
+				353063E71EC4B8C9003F542B /* Network */,
 				353063D01EC4B652003F542B /* AppDelegate.swift */,
 				353063D21EC4B652003F542B /* ViewController.swift */,
 				353063D41EC4B652003F542B /* Main.storyboard */,
@@ -64,6 +79,40 @@
 			path = Momentum;
 			sourceTree = "<group>";
 		};
+		353063E41EC4B834003F542B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				353063E21EC4B81F003F542B /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		353063E71EC4B8C9003F542B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				353063E81EC4B915003F542B /* MomentumRouter.swift */,
+				353063E51EC4B854003F542B /* MomentumApiClient.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		645836ECAA26FD01E393E8D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AF77D8C53A43A461105B7BF /* Pods-Momentum.debug.xcconfig */,
+				B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA578FED7487ED2FFB27DCB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 353063DF1EC4B652003F542B /* Build configuration list for PBXNativeTarget "Momentum" */;
 			buildPhases = (
+				A8D171F2FBF33EE05CB57BAF /* [CP] Check Pods Manifest.lock */,
 				353063C91EC4B652003F542B /* Sources */,
 				353063CA1EC4B652003F542B /* Frameworks */,
 				353063CB1EC4B652003F542B /* Resources */,
+				05F31EC34CF049DB4C2C391D /* [CP] Embed Pods Frameworks */,
+				A3BCDF3B78D48957D87AB546 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +184,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F31EC34CF049DB4C2C391D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Momentum/Pods-Momentum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3BCDF3B78D48957D87AB546 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Momentum/Pods-Momentum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8D171F2FBF33EE05CB57BAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		353063C91EC4B652003F542B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				353063D31EC4B652003F542B /* ViewController.swift in Sources */,
+				353063E61EC4B854003F542B /* MomentumApiClient.swift in Sources */,
 				353063D11EC4B652003F542B /* AppDelegate.swift in Sources */,
+				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
+				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +360,7 @@
 		};
 		353063E01EC4B652003F542B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF77D8C53A43A461105B7BF /* Pods-Momentum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTY3SWQ26V;
@@ -270,6 +374,7 @@
 		};
 		353063E11EC4B652003F542B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTY3SWQ26V;
@@ -300,6 +405,7 @@
 				353063E11EC4B652003F542B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
