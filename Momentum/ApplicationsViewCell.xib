@@ -26,6 +26,11 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ZfV-dV-2Pl" secondAttribute="height" id="0bk-WI-hkd"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2jP-2w-bOK">
                         <rect key="frame" x="66.5" y="23" width="42" height="21"/>

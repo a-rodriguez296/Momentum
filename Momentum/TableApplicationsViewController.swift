@@ -9,22 +9,22 @@
 import UIKit
 
 class TableApplicationsViewController: UIViewController {
-
     
-        @IBOutlet weak var table: UITableView!
+    
+    @IBOutlet weak var table: UITableView!
     
     
     let viewModel = ApplicationsViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         viewModel.initializeFetchedResultsController()
         
         table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-  
+        
     }
 }
 
@@ -41,8 +41,7 @@ extension TableApplicationsViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ApplicationsViewCell
         
-       cell.lblApplication.text = application.name!
-        
+        cell.initializeCell(withApplication: application)
         return cell
     }
     
