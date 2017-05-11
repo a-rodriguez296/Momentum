@@ -20,8 +20,13 @@ class CollectionApplicationsViewController: UIViewController {
         viewModel.initializeFetchedResultsController()
         
         collectionView.register(UINib(nibName: "ApplicationsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didSelectDetail(notification:)), name:NSNotification.Name(Constants.Notifications.didSelectTableDetail), object: nil)
     }
     
+    func didSelectDetail(notification: Notification){
+        let _ = navigationController?.popToRootViewController(animated: false)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -55,5 +60,6 @@ extension CollectionApplicationsViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let application = viewModel.object(at: indexPath) as! CDApplication
         performSegue(withIdentifier: Constants.Segues.collectionDetailSegue, sender: application)
+       
     }
 }

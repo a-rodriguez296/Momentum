@@ -25,6 +25,13 @@ class TableApplicationsViewController: UIViewController {
         
         table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didSelectDetail(notification:)), name:NSNotification.Name(Constants.Notifications.didSelectCollectionDetail), object: nil)
+        
+        
+    }
+    
+    func didSelectDetail(notification: Notification){
+        let _ = navigationController?.popToRootViewController(animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -63,5 +70,7 @@ extension TableApplicationsViewController: UITableViewDelegate{
         let application = viewModel.object(at: indexPath) as! CDApplication
         
         performSegue(withIdentifier: Constants.Segues.tableDetailSegue, sender: application)
+        
+        
     }
 }

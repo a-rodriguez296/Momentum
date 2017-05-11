@@ -33,7 +33,11 @@ struct Constants {
     struct Segues{
         static let tableDetailSegue = "tableDetailSegue"
         static let collectionDetailSegue = "collectionDetailSegue"
-        
+    }
+    
+    struct Notifications {
+        static let didSelectCollectionDetail = "didSelectCollectionDetial"
+        static let didSelectTableDetail = "didSelectTableDetial"
     }
     
 }
