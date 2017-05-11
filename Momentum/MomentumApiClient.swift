@@ -34,7 +34,7 @@ extension MomentumApiClient{
             case .success(let value):
                 let json = JSON(value)
                 let applicationsResponse = ApplicationsResponse(json: json)
-//                CoreDataOperations.saveCategoriesAndApplications(with: applicationsResponse)
+                CoreDataOperations.saveApplications(with: applicationsResponse)
                 completion(true, nil)
             case .failure(let error):
                 completion(false, error.localizedDescription)

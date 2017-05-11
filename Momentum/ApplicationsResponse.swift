@@ -14,7 +14,6 @@ struct ApplicationsResponse{
     
     
     let applicationsArray:Array<Application>
-    var categoriesArray = Array<String>()
     
     init(json: JSON) {
         

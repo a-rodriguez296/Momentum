@@ -23,6 +23,7 @@
 		353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F11EC4C085003F542B /* CDApplication+CoreDataProperties.swift */; };
 		353063F61EC4C085003F542B /* CDPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F21EC4C085003F542B /* CDPhoto.swift */; };
 		353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */; };
+		353063FD1EC4C43E003F542B /* CoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353063FC1EC4C43E003F542B /* CoreDataOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		353063F11EC4C085003F542B /* CDApplication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDApplication+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		353063F21EC4C085003F542B /* CDPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPhoto.swift; sourceTree = "<group>"; };
 		353063F31EC4C085003F542B /* CDPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		353063FC1EC4C43E003F542B /* CoreDataOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperations.swift; sourceTree = "<group>"; };
 		3C8F4DDAC7605F911B5D3FC2 /* Pods_Momentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Momentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E58E8B714D60B5091EF9B9 /* Pods-Momentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momentum/Pods-Momentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				353063F91EC4C0C6003F542B /* Human Files */,
 				353063F81EC4C0BC003F542B /* Machine Files */,
 				353063EE1EC4BFFE003F542B /* Model.xcdatamodel */,
+				353063FC1EC4C43E003F542B /* CoreDataOperations.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				353063EB1EC4BEC2003F542B /* ApplicationsResponse.swift in Sources */,
 				353063F51EC4C085003F542B /* CDApplication+CoreDataProperties.swift in Sources */,
 				353063F71EC4C085003F542B /* CDPhoto+CoreDataProperties.swift in Sources */,
+				353063FD1EC4C43E003F542B /* CoreDataOperations.swift in Sources */,
 				353063E31EC4B81F003F542B /* Constants.swift in Sources */,
 				353063EF1EC4BFFE003F542B /* Model.xcdatamodel in Sources */,
 				353063E91EC4B915003F542B /* MomentumRouter.swift in Sources */,

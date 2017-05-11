@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         MomentumApiClient.sharedInstance.getTopApplications { (state, string) in
             
+            if state{
+                
+            }
+            
         }
         
         
