@@ -13,3 +13,9 @@ protocol LoadingViewModelProtocol:class {
     func didDownloadData(success:Bool, error:String?)
     func noInternetConnection()
 }
+
+
+protocol ApplicationsViewModelProtocol:class{
+    
+    func didDeleteObject(atIndexPath indexPath: IndexPath)
+}

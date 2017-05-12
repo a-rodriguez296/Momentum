@@ -92,6 +92,14 @@
 			name = "Detail View";
 			sourceTree = "<group>";
 		};
+		35179E061EC51FFB00EEB96F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				35179E041EC5171800EEB96F /* TabBarViewController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 		353063C41EC4B652003F542B = {
 			isa = PBXGroup;
 			children = (
@@ -206,9 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				353064281EC4D4DE003F542B /* Loading View */,
+				35179E061EC51FFB00EEB96F /* TabBar */,
 				3530643A1EC5094E003F542B /* Applications View */,
 				35179E031EC5106100EEB96F /* Detail View */,
-				35179E041EC5171800EEB96F /* TabBarViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

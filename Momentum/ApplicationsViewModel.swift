@@ -11,7 +11,7 @@ import MagicalRecord
 
 class ApplicationsViewModel: NSObject {
     
-    
+    weak var delegate:ApplicationsViewModelProtocol?
    
     
     lazy var fetchedResultsController:NSFetchedResultsController<CDApplication> = {
@@ -55,6 +55,18 @@ class ApplicationsViewModel: NSObject {
         return fetchedResultsController.object(at: indexPath)
         
     }
+    
+    func deleteObjectAt(indexPath index:IndexPath){
+        let object = self.object(at: index)
+        object.mr_deleteEntity()
+    }
 }
 
-extension ApplicationsViewModel: NSFetchedResultsControllerDelegate{}
+extension ApplicationsViewModel: NSFetchedResultsControllerDelegate{
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if type == .delete{
+            delegate?.didDeleteObject(atIndexPath: indexPath!)
+        }
+    }
+
+}
