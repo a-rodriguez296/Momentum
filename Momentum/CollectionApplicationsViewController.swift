@@ -23,8 +23,6 @@ class CollectionApplicationsViewController: UIViewController {
         
         collectionView.register(UINib(nibName: "ApplicationsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         
-        NotificationCenter.default.addObserver(self, selector: #selector(didSelectDetail(notification:)), name:NSNotification.Name(Constants.Notifications.didSelectTableDetail), object: nil)
-        
         initializeLongPressGesture()
         
     }
@@ -35,10 +33,6 @@ class CollectionApplicationsViewController: UIViewController {
         longPressGR.minimumPressDuration = 0.5
         longPressGR.delaysTouchesBegan = true
         collectionView.addGestureRecognizer(longPressGR)
-    }
-    
-    func didSelectDetail(notification: Notification){
-        let _ = navigationController?.popToRootViewController(animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

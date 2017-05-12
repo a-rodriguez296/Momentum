@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="2584.8000000000002" y="-757.87106446776613"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="N84-pA-Tj3">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mBO-C5-jTA" customClass="TabBarViewController" customModule="Momentum" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mBO-C5-jTA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="22o-wD-6f2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

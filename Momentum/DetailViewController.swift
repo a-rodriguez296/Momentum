@@ -19,5 +19,9 @@ class DetailViewController: UIViewController {
 
         lblApplicationName.text = application!.name!
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let _ = navigationController?.popToRootViewController(animated: true)
+    }
 }
