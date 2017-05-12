@@ -44,5 +44,12 @@ class ApplicationsCollectionCell: UICollectionViewCell {
             })
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        imgApplication.af_cancelImageRequest()
+        imgApplication.image = nil
+    }
 
 }

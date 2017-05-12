@@ -8,8 +8,9 @@
 
 import UIKit
 import AlamofireImage
+import MGSwipeTableCell
 
-class ApplicationsViewCell: UITableViewCell {
+class ApplicationsViewCell: MGSwipeTableCell {
 
     @IBOutlet weak var imgApplication: UIImageView!
     @IBOutlet weak var lblApplication: UILabel!

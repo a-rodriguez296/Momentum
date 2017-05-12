@@ -11,4 +11,5 @@ pod 'SwiftyJSON'
 pod 'MagicalRecord'
 pod 'AlamofireImage'
 pod 'ReachabilitySwift'
+pod 'MGSwipeTableCell'
 end

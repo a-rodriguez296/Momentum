@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
 class TableApplicationsViewController: UIViewController {
     
@@ -19,9 +20,9 @@ class TableApplicationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         
         viewModel.initializeFetchedResultsController()
+        viewModel.delegate = self
         
         table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
@@ -59,6 +60,11 @@ extension TableApplicationsViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ApplicationsViewCell
         
         cell.initializeCell(withApplication: application)
+        cell.rightButtons = [MGSwipeButton.init(title: "Delete", backgroundColor: .red, callback: { (cell) -> Bool in
+            self.viewModel.deleteObjectAt(indexPath: indexPath)
+            return true
+        })]
+        
         return cell
     }
 }
@@ -68,9 +74,16 @@ extension TableApplicationsViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let application = viewModel.object(at: indexPath) as! CDApplication
-        
         performSegue(withIdentifier: Constants.Segues.tableDetailSegue, sender: application)
-        
-        
+    }
+}
+
+
+extension TableApplicationsViewController: ApplicationsViewModelProtocol{
+    
+    func didDeleteObject(atIndexPath indexPath: IndexPath) {
+        table.beginUpdates()
+        table.deleteRows(at: [indexPath], with: .fade)
+        table.endUpdates()
     }
 }

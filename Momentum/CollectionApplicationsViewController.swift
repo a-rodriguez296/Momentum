@@ -121,6 +121,8 @@ extension CollectionApplicationsViewController{
 extension CollectionApplicationsViewController: ApplicationsViewModelProtocol{
     
     func didDeleteObject(atIndexPath indexPath: IndexPath) {
+        collectionView.beginInteractiveMovementForItem(at: indexPath)
         collectionView.deleteItems(at: [indexPath])
+        collectionView.endInteractiveMovement()
     }
 }
