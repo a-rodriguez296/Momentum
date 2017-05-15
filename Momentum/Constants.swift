@@ -16,7 +16,7 @@ struct Constants {
         }
         
         struct TopApplications {
-            static let topApplications = "topfreeapplications/limit=60/json"
+            static let topApplications = "topfreeapplications/limit=100/json"
             
             static let feed = "feed"
             static let entry = "entry"

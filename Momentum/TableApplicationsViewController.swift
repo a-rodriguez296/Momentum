@@ -55,7 +55,8 @@ extension TableApplicationsViewController: UITableViewDataSource{
         
         cell.initializeCell(withApplication: application)
         cell.rightButtons = [MGSwipeButton.init(title: "Delete", backgroundColor: .red, callback: { (cell) -> Bool in
-            self.viewModel.deleteObjectAt(indexPath: indexPath)
+            let auxIndex = self.table.indexPath(for: cell)
+            self.viewModel.deleteObjectAt(indexPath: auxIndex!)
             return true
         })]
         
