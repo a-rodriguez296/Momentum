@@ -170,14 +170,14 @@
                                     <action selector="didPressThumbnail:" destination="zEE-bt-QvF" eventType="touchUpInside" id="Pb0-sv-5Zs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-GW-tWE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-GW-tWE">
                                 <rect key="frame" x="24" y="163" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TwB-dD-BS2">
-                                <rect key="frame" x="24" y="200" width="327" height="410"/>
+                                <rect key="frame" x="24" y="200" width="327" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -205,6 +205,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LJ6-2U-cNS">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="n3B-QT-gds">
+                            <connections>
+                                <action selector="didPressSettings:" destination="zEE-bt-QvF" id="vfc-WH-HfS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnAppThumbnail" destination="sBF-6s-Oh1" id="0cs-98-vHf"/>
                         <outlet property="cstToThumbanil" destination="qMg-Eu-xnW" id="p8W-tv-3RT"/>

@@ -48,4 +48,27 @@ class DetailViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
+    @IBAction func didPressSettings(_ sender: Any) {
+        
+        
+        let alertController = UIAlertController(title: "Attention",message: "Select font size" ,preferredStyle: UIAlertControllerStyle.alert)
+        
+        let biggerFontSizeAction = UIAlertAction(title: "Bigger font size",style: .default){ (alert) in
+            self.lblAppTitle.font = self.lblAppTitle.font.withSize(22)
+            self.txtApplicationDescription.font = self.txtApplicationDescription.font?.withSize(17)
+        }
+        
+        alertController.addAction(biggerFontSizeAction)
+        
+        let smallerFontSizeAction = UIAlertAction(title: "Smaller font size", style: .default) { (alert) in
+            self.lblAppTitle.font = self.lblAppTitle.font.withSize(17)
+            self.txtApplicationDescription.font = self.txtApplicationDescription.font?.withSize(14)        }
+        alertController.addAction(smallerFontSizeAction)
+        
+        present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
 }
