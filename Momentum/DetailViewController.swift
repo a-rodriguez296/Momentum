@@ -66,8 +66,6 @@ class DetailViewController: UIViewController {
         alertController.addAction(smallerFontSizeAction)
         
         present(alertController, animated: true, completion: nil)
-        
-        
     }
     
     

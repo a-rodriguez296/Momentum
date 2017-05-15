@@ -15,14 +15,15 @@ class TableApplicationsViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     let viewModel = ApplicationsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        viewModel.initializeFetchedResultsController()
-        viewModel.delegate = self
+        initializeSearchController()
+        initializeViewModel()
         
         table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
@@ -36,6 +37,18 @@ class TableApplicationsViewController: UIViewController {
             let detailVC = segue.destination as! DetailViewController
             detailVC.application = sender! as? CDApplication
         }
+    }
+    
+    func initializeViewModel(){
+        viewModel.initializeFetchedResultsController()
+        viewModel.delegate = self
+    }
+    
+    func initializeSearchController(){
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        table.tableHeaderView = searchController.searchBar
     }
     
 }
@@ -80,5 +93,12 @@ extension TableApplicationsViewController: ApplicationsViewModelProtocol{
         table.beginUpdates()
         table.deleteRows(at: [indexPath], with: .fade)
         table.endUpdates()
+    }
+}
+
+extension TableApplicationsViewController: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController){
+        viewModel.changeFRCPredicateWithText(text: searchController.searchBar.text!)
+        table.reloadData()
     }
 }

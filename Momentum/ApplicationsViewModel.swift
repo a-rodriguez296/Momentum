@@ -12,7 +12,7 @@ import MagicalRecord
 class ApplicationsViewModel: NSObject {
     
     weak var delegate:ApplicationsViewModelProtocol?
-   
+    
     
     lazy var fetchedResultsController:NSFetchedResultsController<CDApplication> = {
         
@@ -27,7 +27,7 @@ class ApplicationsViewModel: NSObject {
         frc.delegate = self
         
         return frc
-
+        
     }()
     
     func initializeFetchedResultsController(){
@@ -60,6 +60,18 @@ class ApplicationsViewModel: NSObject {
         let object = self.object(at: index)
         object.mr_deleteEntity()
     }
+    
+    
+    func changeFRCPredicateWithText(text: String){
+        NSFetchedResultsController<NSFetchRequestResult>.deleteCache(withName: nil)
+        if !text.isEmpty{
+            fetchedResultsController.fetchRequest.predicate = NSPredicate.init(format: "name contains[c] %@", text)
+        }
+        else{
+            fetchedResultsController.fetchRequest.predicate = nil
+        }
+        initializeFetchedResultsController()
+    }
 }
 
 extension ApplicationsViewModel: NSFetchedResultsControllerDelegate{
@@ -68,5 +80,5 @@ extension ApplicationsViewModel: NSFetchedResultsControllerDelegate{
             delegate?.didDeleteObject(atIndexPath: indexPath!)
         }
     }
-
+    
 }
