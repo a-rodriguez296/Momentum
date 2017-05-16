@@ -33,11 +33,30 @@ struct Constants {
     struct Segues{
         static let tableDetailSegue = "tableDetailSegue"
         static let collectionDetailSegue = "collectionDetailSegue"
+        static let presentTabBarSegue = "PresentTabBarSegue"
     }
     
     struct Notifications {
         static let didSelectCollectionDetail = "didSelectCollectionDetial"
         static let didSelectTableDetail = "didSelectTableDetial"
+    }
+    
+    struct CellIdentifiers {
+        struct ApplicationsTable{
+            static let cell = "Cell"
+        }
+        struct ApplicationsCollection{
+            static let cell = "Cell"
+        }
+    }
+    
+    struct NibNames {
+        struct ApplicationsTable{
+            static let cellNibName = "ApplicationsViewCell"
+        }
+        struct ApplicationsCollection{
+            static let cellNibName = "ApplicationsCollectionCell"
+        }
     }
     
 }

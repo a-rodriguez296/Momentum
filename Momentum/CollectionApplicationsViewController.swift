@@ -18,13 +18,17 @@ class CollectionApplicationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.delegate = self
-        viewModel.initializeFetchedResultsController()
+        setupViewModel()
         
-        collectionView.register(UINib(nibName: "ApplicationsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        collectionView.register(UINib(nibName: Constants.NibNames.ApplicationsCollection.cellNibName, bundle: nil), forCellWithReuseIdentifier: Constants.CellIdentifiers.ApplicationsCollection.cell)
         
         initializeLongPressGesture()
         
+    }
+    
+    func setupViewModel(){
+        viewModel.delegate = self
+        viewModel.initializeFetchedResultsController()
     }
     
     
@@ -55,7 +59,7 @@ extension CollectionApplicationsViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let application = viewModel.object(at: indexPath) as! CDApplication
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ApplicationsCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifiers.ApplicationsCollection.cell, for: indexPath) as! ApplicationsCollectionCell
         cell.initializeCell(withApplication: application)
         
         return cell

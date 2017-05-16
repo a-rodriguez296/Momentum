@@ -30,7 +30,7 @@ extension LoadingViewController: LoadingViewModelProtocol{
         
         let when = DispatchTime.now() + 1.5
         DispatchQueue.main.asyncAfter(deadline: when) {
-          self.performSegue(withIdentifier: "PresentTabBarSegue", sender: nil)
+          self.performSegue(withIdentifier: Constants.Segues.presentTabBarSegue, sender: nil)
         }
     }
     

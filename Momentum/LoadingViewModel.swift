@@ -31,7 +31,7 @@ class LoadingViewModel{
         if !isDataAvailable  && networkStatus == .notReachable{
             
             //Display alert
-            delegate?.didDownloadData(success: false, error: NSLocalizedString("Debes tener Internet la primera vez que usas la aplicación", comment: ""))
+            delegate?.didDownloadData(success: false, error: NSLocalizedString("You need to have an internet connection the first time you run the app.", comment: ""))
             delegate?.noInternetConnection()
         }
         
@@ -57,7 +57,7 @@ class LoadingViewModel{
                 self.delegate?.didDownloadData(success: true, error: nil)
             }
             else{
-                self.delegate?.didDownloadData(success: false, error:  NSLocalizedString("Ocurrió un error. Intenta de nuevo más tarde", comment: ""))
+                self.delegate?.didDownloadData(success: false, error:  NSLocalizedString("An error occured. Try again later", comment: ""))
             }
         })
     }

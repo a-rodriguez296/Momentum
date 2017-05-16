@@ -92,6 +92,14 @@
 			name = "Detail View";
 			sourceTree = "<group>";
 		};
+		352770A11ECB57B7000B67AE /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				3527709F1ECB521A000B67AE /* DetailViewModel.swift */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
 		353063C41EC4B652003F542B = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +198,7 @@
 			children = (
 				353064011EC4C9C5003F542B /* Loading View */,
 				353064271EC4D4BF003F542B /* Applications View */,
-				3527709F1ECB521A000B67AE /* DetailViewModel.swift */,
+				352770A11ECB57B7000B67AE /* Detail View */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";

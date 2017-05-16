@@ -25,7 +25,7 @@ class TableApplicationsViewController: UIViewController {
         initializeSearchController()
         initializeViewModel()
         
-        table.register(UINib.init(nibName: "ApplicationsViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        table.register(UINib.init(nibName: Constants.NibNames.ApplicationsTable.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.ApplicationsTable.cell)
         
         
     }
@@ -64,7 +64,7 @@ extension TableApplicationsViewController: UITableViewDataSource{
         
         let application = viewModel.object(at: indexPath) as! CDApplication
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ApplicationsViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.ApplicationsTable.cell) as! ApplicationsViewCell
         
         cell.initializeCell(withApplication: application)
         cell.rightButtons = [MGSwipeButton.init(title: "Delete", backgroundColor: .red, callback: { (cell) -> Bool in
