@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     
     var application:CDApplication?
     
+    let viewModel = DetailViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,7 @@ class DetailViewController: UIViewController {
         lblAppTitle.text = application?.name!
         txtApplicationDescription.text = application?.summary!
         
+        viewModel.delegate = self
     }
 
     
@@ -68,5 +71,18 @@ class DetailViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func didPressDelete(_ sender: Any) {
+        viewModel.delete(application: application!)
+    }
     
+}
+
+extension DetailViewController: DetailViewModelProtocol{
+    
+    func didDeleteApplication() {
+        let when = DispatchTime.now() + 0.45
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            let _ = self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }

@@ -177,27 +177,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TwB-dD-BS2">
-                                <rect key="frame" x="24" y="200" width="327" height="415"/>
+                                <rect key="frame" x="24" y="200" width="327" height="369"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8I-up-cxl">
+                                <rect key="frame" x="164.5" y="585" width="45" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.33333333329999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressDelete:" destination="zEE-bt-QvF" eventType="touchUpInside" id="JLB-qz-UK8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pLm-GW-tWE" firstAttribute="leading" secondItem="hFn-bE-BsL" secondAttribute="leadingMargin" constant="8" id="1Bk-uE-IYx"/>
                             <constraint firstItem="TwB-dD-BS2" firstAttribute="top" secondItem="pLm-GW-tWE" secondAttribute="bottom" constant="16" id="Bkr-0D-4wY"/>
+                            <constraint firstItem="C8I-up-cxl" firstAttribute="top" secondItem="TwB-dD-BS2" secondAttribute="bottom" constant="16" id="GTG-5r-rP9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TwB-dD-BS2" secondAttribute="trailing" constant="8" id="Ld3-BN-uN7"/>
                             <constraint firstItem="sBF-6s-Oh1" firstAttribute="width" secondItem="hFn-bE-BsL" secondAttribute="width" multiplier="0.2" id="LyZ-Bj-F7k"/>
                             <constraint firstItem="TwB-dD-BS2" firstAttribute="centerX" secondItem="sBF-6s-Oh1" secondAttribute="centerX" id="WYM-HW-C1y"/>
-                            <constraint firstItem="2Be-Jj-TuV" firstAttribute="top" secondItem="TwB-dD-BS2" secondAttribute="bottom" constant="8" id="XhU-3u-PxS"/>
                             <constraint firstItem="TwB-dD-BS2" firstAttribute="leading" secondItem="hFn-bE-BsL" secondAttribute="leadingMargin" constant="8" id="b3p-71-voS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pLm-GW-tWE" secondAttribute="trailing" constant="8" id="edU-f0-9LB"/>
                             <constraint firstItem="pLm-GW-tWE" firstAttribute="top" secondItem="sBF-6s-Oh1" secondAttribute="bottom" constant="8" id="qMg-Eu-xnW"/>
                             <constraint firstItem="sBF-6s-Oh1" firstAttribute="centerX" secondItem="hFn-bE-BsL" secondAttribute="centerX" id="sWF-Da-8Rr"/>
+                            <constraint firstItem="C8I-up-cxl" firstAttribute="centerX" secondItem="hFn-bE-BsL" secondAttribute="centerX" id="uhf-95-Eif"/>
                             <constraint firstItem="sBF-6s-Oh1" firstAttribute="top" secondItem="Hfe-Hd-8CL" secondAttribute="bottom" constant="16" id="vyy-zT-iYS"/>
                             <constraint firstItem="pLm-GW-tWE" firstAttribute="top" secondItem="Hfe-Hd-8CL" secondAttribute="bottom" constant="8" id="xM8-wi-yRP"/>
                             <constraint firstItem="pLm-GW-tWE" firstAttribute="centerX" secondItem="sBF-6s-Oh1" secondAttribute="centerX" id="yzR-ZE-wPs"/>
+                            <constraint firstItem="2Be-Jj-TuV" firstAttribute="top" secondItem="C8I-up-cxl" secondAttribute="bottom" constant="8" id="zMe-2a-0bk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -224,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPZ-fn-PZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3876" y="-254"/>
+            <point key="canvasLocation" x="3876" y="-254.12293853073464"/>
         </scene>
         <!--Table-->
         <scene sceneID="edk-qg-cSX">

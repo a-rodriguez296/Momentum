@@ -19,3 +19,9 @@ protocol ApplicationsViewModelProtocol:class{
     
     func didDeleteObject(atIndexPath indexPath: IndexPath)
 }
+
+
+protocol DetailViewModelProtocol:class{
+    
+    func didDeleteApplication()
+}
